@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DX MASTER VPN KING OF BGB CEO</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#05050f;color:#fff;font-family:Arial,sans-serif;min-height:100vh;padding:14px;
+background-image:radial-gradient(circle at 20% 10%,#2a0014 0,transparent 40%),radial-gradient(circle at 80% 90%,#00122e 0,transparent 40%)}
+.wrap{max-width:480px;margin:auto}
+h1{text-align:center;font-size:18px;letter-spacing:1px;padding:14px 8px;border-radius:14px;
+background:linear-gradient(90deg,#ff003c,#0066ff,#ff003c);background-size:200%;animation:bg 3s linear infinite;
+text-shadow:0 0 10px #000;margin-bottom:14px}
+@keyframes bg{to{background-position:200%}}
+.card{background:#10101e;border:1px solid #26264a;border-radius:16px;padding:14px;margin-bottom:12px}
+.card h2{font-size:14px;color:#8fb4ff;margin-bottom:10px}
+.mic{display:block;margin:6px auto 12px;width:130px;height:130px;border-radius:50%;border:4px solid #444;
+background:#1a1a2e;font-size:56px;cursor:pointer;transition:.2s}
+.mic.on{border-color:#00ff6a;box-shadow:0 0 30px #00ff6a,0 0 60px #ff003c;animation:pulse 1s infinite}
+@keyframes pulse{50%{transform:scale(1.07)}}
+.status{text-align:center;font-weight:bold;margin-bottom:8px}
+.meter{height:14px;background:#1c1c33;border-radius:8px;overflow:hidden}
+.bar{height:100%;width:0;background:linear-gradient(90deg,#00ff6a,#ffee00,#ff003c)}
+.row{display:flex;align-items:center;gap:8px;margin:8px 0}
+.row label{flex:1;font-size:13px}
+.row b{min-width:78px;text-align:right;font-size:13px;color:#ffd84a}
+input[type=range]{width:100%}
+button{border:0;border-radius:10px;padding:10px 12px;font-weight:bold;color:#fff;cursor:pointer;
+background:linear-gradient(135deg,#ff003c,#0050ff)}
+button:active{transform:scale(.95)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.grid button.act{outline:3px solid #00ff6a}
+.pm{width:42px;font-size:18px}
+.warn{font-size:12px;color:#ff9aa8;text-align:center;margin-top:6px;line-height:1.5}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>🔥 DX MASTER VPN KING OF BGB CEO 🔥</h1>
+
+<div class="card">
+  <button class="mic" id="micBtn">🎤</button>
+  <div class="status" id="status">মাইক বন্ধ আছে</div>
+  <div style="display:flex;gap:8px">
+    <button style="flex:1" id="openBtn">▶ মাইক চালু</button>
+    <button style="flex:1" id="closeBtn">⏹ মাইক বন্ধ</button>
+  </div>
+  <div class="meter" style="margin-top:12px"><div class="bar" id="bar"></div></div>
+</div>
+
+<div class="card">
+  <h2>🔊 ভলিউম বুস্টার</h2>
+  <div class="row">
+    <button class="pm" id="bMinus">−</button>
+    <input type="range" id="boost" min="100" max="70000" step="100" value="7000">
+    <button class="pm" id="bPlus">+</button>
+  </div>
+  <div class="row"><label>বুস্ট লেভেল</label><b id="boostV">7000%</b></div>
+  <div class="grid">
+    <button data-b="100">100%</button>
+    <button data-b="1000">1000%</button>
+    <button data-b="7000">7000%</button>
+    <button data-b="20000">20000%</button>
+    <button data-b="40000">40000%</button>
+    <button data-b="70000">70000%</button>
+  </div>
+  <div class="row" style="margin-top:12px">
+    <button class="pm" id="mMinus">−</button>
+    <input type="range" id="master" min="0" max="200" step="5" value="100">
+    <button class="pm" id="mPlus">+</button>
+  </div>
+  <div class="row"><label>মাস্টার ভলিউম</label><b id="masterV">100%</b></div>
+</div>
+
+<div class="card">
+  <h2>🔁 ইকো সাউন্ড সিস্টেম</h2>
+  <div class="row">
+    <button class="pm" id="eMinus">−</button>
+    <input type="range" id="echo" min="0" max="90" step="1" value="0">
+    <button class="pm" id="ePlus">+</button>
+  </div>
+  <div class="row"><label>ইকো</label><b id="echoV">0%</b></div>
+  <div class="row"><input type="range" id="delay" min="50" max="900" step="10" value="300"></div>
+  <div class="row"><label>ইকো দেরি</label><b id="delayV">300ms</b></div>
+</div>
+
+<div class="card">
+  <h2>🎚 বাস ও ট্রেবল</h2>
+  <div class="row"><label>বাস</label><b id="bassV">0 dB</b></div>
+  <input type="range" id="bass" min="-20" max="30" step="1" value="0">
+  <div class="row"><label>ট্রেবল</label><b id="trebleV">0 dB</b></div>
+  <input type="range" id="treble" min="-20" max="30" step="1" value="0">
+</div>
+
+<div class="card">
+  <h2>🎭 ভয়েস ইফেক্ট</h2>
+  <div class="grid" id="fxGrid">
+    <button data-fx="normal" class="act">স্বাভাবিক</button>
+    <button data-fx="deep">ভারী কন্ঠ</button>
+    <button data-fx="thin">পাতলা টোন</button>
+    <button data-fx="robot">রোবট</button>
+    <button data-fx="radio">রেডিও</button>
+    <button data-fx="monster">দানব</button>
+  </div>
+</div>
+
+<div class="card">
+  <h2>🎵 সাউন্ড বাটন</h2>
+  <div class="grid">
+    <button data-s="siren">🚨 সাইরেন</button>
+    <button data-s="horn">📯 হর্ন</button>
+    <button data-s="laser">🔫 লেজার</button>
+    <button data-s="drop">💥 বাস ড্রপ</button>
+    <button data-s="alarm">⏰ এলার্ম</button>
+    <button data-s="bell">🔔 ঘণ্টা</button>
+    <button data-s="police">👮 পুলিশ</button>
+    <button data-s="up">📈 আপ</button>
+    <button data-s="stop">⛔ থামাও</button>
+  </div>
+</div>
+
+<div class="card">
+  <h2>🎧 নিজের সাউন্ড নিজে শোনা</h2>
+  <button style="width:100%" id="hearBtn">নিজের সাউন্ড শোনা: চালু</button>
+  <div class="warn">⚠️ ইকো/ফিডব্যাক এড়াতে হেডফোন ব্যবহার করুন। অতিরিক্ত বুস্ট কানের ক্ষতি করতে পারে, তাই ধীরে ধীরে বাড়ান।</div>
+</div>
+</div>
+
+<script>
+let ctx, stream, src, on = false, hear = true, fx = 'normal', raf;
+let N = {};
+const $ = id => document.getElementById(id);
+
+function curve(k){
+  const n = 44100, c = new Float32Array(n);
+  for (let i = 0; i < n; i++){ const x = i * 2 / n - 1; c[i] = Math.tanh(x * k); }
+  return c;
+}
+
+async function startMic(){
+  if (on) return;
+  try{
+    stream = await navigator.mediaDevices.getUserMedia({
+      audio:{ echoCancellation:false, noiseSuppression:false, autoGainControl:false }
+    });
+  }catch(e){
+    alert('মাইক পারমিশন পাওয়া যায়নি। Allow দিন।');
+    return;
+  }
+  ctx = new (window.AudioContext || window.webkitAudioContext)();
+  await ctx.resume();
+  src = ctx.createMediaStreamSource(stream);
+
+  N.hp = ctx.createBiquadFilter(); N.hp.type = 'highpass'; N.hp.frequency.value = 60;
+  N.bass = ctx.createBiquadFilter(); N.bass.type = 'lowshelf'; N.bass.frequency.value = 200;
+  N.treble = ctx.createBiquadFilter(); N.treble.type = 'highshelf'; N.treble.frequency.value = 3000;
+  N.fx = ctx.createBiquadFilter(); N.fx.type = 'allpass';
+  N.ring = ctx.createGain(); N.ring.gain.value = 1;
+  N.osc = ctx.createOscillator(); N.osc.frequency.value = 55;
+  N.oscDepth = ctx.createGain(); N.oscDepth.gain.value = 0;
+  N.osc.connect(N.oscDepth); N.oscDepth.connect(N.ring.gain); N.osc.start();
+  N.pre = ctx.createGain();
+  N.shaper = ctx.createWaveShaper(); N.shaper.curve = curve(3); N.shaper.oversample = '4x';
+  N.comp = ctx.createDynamicsCompressor();
+  N.comp.threshold.value = -20; N.comp.knee.value = 20; N.comp.ratio.value = 12;
+  N.comp.attack.value = 0.003; N.comp.release.value = 0.15;
+  N.dry = ctx.createGain();
+  N.delay = ctx.createDelay(2);
+  N.fb = ctx.createGain();
+  N.wet = ctx.createGain();
+  N.mix = ctx.createGain();
+  N.limit = ctx.createDynamicsCompressor();
+  N.limit.threshold.value = -3; N.limit.knee.value = 0; N.limit.ratio.value = 20;
+  N.limit.attack.value = 0.001; N.limit.release.value = 0.08;
+  N.master = ctx.createGain();
+  N.mute = ctx.createGain();
+  N.an = ctx.createAnalyser(); N.an.fftSize = 256;
+
+  src.connect(N.hp); N.hp.connect(N.bass); N.bass.connect(N.treble); N.treble.connect(N.fx);
+  N.fx.connect(N.ring); N.ring.connect(N.pre); N.pre.connect(N.shaper); N.shaper.connect(N.comp);
+  N.comp.connect(N.dry); N.dry.connect(N.mix);
+  N.comp.connect(N.delay); N.delay.connect(N.fb); N.fb.connect(N.delay);
+  N.delay.connect(N.wet); N.wet.connect(N.mix);
+  N.mix.connect(N.limit); N.limit.connect(N.master); N.master.connect(N.an);
+  N.master.connect(N.mute); N.mute.connect(ctx.destination);
+
+  on = true;
+  applyAll();
+  $('micBtn').classList.add('on');
+  $('status').textContent = '🟢 মাইক চালু আছে';
+  meter();
+}
+
+function stopMic(){
+  if (!on) return;
+  on = false;
+  cancelAnimationFrame(raf);
+  try{ stream.getTracks().forEach(t => t.stop()); }catch(e){}
+  try{ N.osc.stop(); }catch(e){}
+  try{ ctx.close(); }catch(e){}
+  $('micBtn').classList.remove('on');
+  $('status').textContent = 'মাইক বন্ধ আছে';
+  $('bar').style.width = '0%';
+}
+
+function applyAll(){
+  if (!on) return;
+  const t = ctx.currentTime;
+  const boost = +$('boost').value;
+  const echo = +$('echo').value / 100;
+  N.pre.gain.setTargetAtTime(boost / 100, t, 0.02);
+  N.dry.gain.value = 1;
+  N.wet.gain.setTargetAtTime(echo, t, 0.02);
+  N.fb.gain.setTargetAtTime(Math.min(echo * 0.8, 0.75), t, 0.02);
+  N.delay.delayTime.setTargetAtTime(+$('delay').value / 1000, t, 0.02);
+  N.master.gain.setTargetAtTime(+$('master').value / 100, t, 0.02);
+  N.mute.gain.setTargetAtTime(hear ? 1 : 0, t, 0.02);
+  applyFx();
+}
+
+function applyFx(){
+  if (!on) return;
+  const t = ctx.currentTime;
+  let bass = +$('bass').value, treble = +$('treble').value;
+  N.ring.gain.cancelScheduledValues(t);
+  N.ring.gain.value = 1; N.oscDepth.gain.value = 0;
+  N.fx.type = 'allpass';
+  if (fx === 'deep'){ bass += 12; treble -= 8; N.fx.type = 'lowpass'; N.fx.frequency.value = 2500; }
+  if (fx === 'thin'){ bass -= 12; treble += 10; N.fx.type = 'peaking'; N.fx.frequency.value = 2500; N.fx.gain.value = 8; }
+  if (fx === 'robot'){ N.ring.gain.value = 0; N.oscDepth.gain.value = 1; N.osc.frequency.value = 55; }
+  if (fx === 'radio'){ N.fx.type = 'bandpass'; N.fx.frequency.value = 1500; N.fx.Q.value = 1.2; }
+  if (fx === 'monster'){ bass += 15; N.fx.type = 'lowpass'; N.fx.frequency.value = 1200; }
+  N.bass.gain.setTargetAtTime(bass, t, 0.02);
+  N.treble.gain.setTargetAtTime(treble, t, 0.02);
+}
+
+function meter(){
+  const d = new Uint8Array(N.an.frequencyBinCount);
+  (function loop(){
+    if (!on) return;
+    N.an.getByteTimeDomainData(d);
+    let m = 0;
+    for (let i = 0; i < d.length; i++) m = Math.max(m, Math.abs(d[i] - 128));
+    $('bar').style.width = Math.min(100, m / 128 * 100) + '%';
+    raf = requestAnimationFrame(loop);
+  })();
+}
+
+function setBoost(v){
+  v = Math.max(100, Math.min(70000, v));
+  $('boost').value = v; $('boostV').textContent = v + '%'; applyAll();
+}
+function setEcho(v){
+  v = Math.max(0, Math.min(90, v));
+  $('echo').value = v; $('echoV').textContent = v + '%'; applyAll();
+}
+function setMaster(v){
+  v = Math.max(0, Math.min(200, v));
+  $('master').value = v; $('masterV').textContent = v + '%'; applyAll();
+}
+
+$('micBtn').onclick = () => on ? stopMic() : startMic();
+$('openBtn').onclick = startMic;
+$('closeBtn').onclick = stopMic;
+
+$('boost').oninput = e => setBoost(+e.target.value);
+$('bMinus').onclick = () => setBoost(+$('boost').value - 1000);
+$('bPlus').onclick = () => setBoost(+$('boost').value + 1000);
+document.querySelectorAll('[data-b]').forEach(b => b.onclick = () => setBoost(+b.dataset.b));
+
+$('master').oninput = e => setMaster(+e.target.value);
+$('mMinus').onclick = () => setMaster(+$('master').value - 10);
+$('mPlus').onclick = () => setMaster(+$('master').value + 10);
+
+$('echo').oninput = e => setEcho(+e.target.value);
+$('eMinus').onclick = () => setEcho(+$('echo').value - 5);
+$('ePlus').onclick = () => setEcho(+$('echo').value + 5);
+$('delay').oninput = e => { $('delayV').textContent = e.target.value + 'ms'; applyAll(); };
+
+$('bass').oninput = e => { $('bassV').textContent = e.target.value + ' dB'; applyAll(); };
+$('treble').oninput = e => { $('trebleV').textContent = e.target.value + ' dB'; applyAll(); };
+
+document.querySelectorAll('[data-fx]').forEach(b => b.onclick = () => {
+  fx = b.dataset.fx;
+  document.querySelectorAll('[data-fx]').forEach(x => x.classList.remove('act'));
+  b.classList.add('act');
+  applyAll();
+});
+
+$('hearBtn').onclick = () => {
+  hear = !hear;
+  $('hearBtn').textContent = 'নিজের সাউন্ড শোনা: ' + (hear ? 'চালু' : 'বন্ধ');
+  applyAll();
+};
+
+/* ===== সাউন্ড বাটন ===== */
+let sctx, sActive = [];
+function sc(){
+  if (!sctx) sctx = new (window.AudioContext || window.webkitAudioContext)();
+  if (sctx.state === 'suspended') sctx.resume();
+  return sctx;
+}
+function tone(type, f1, f2, dur, vol, loopLfo){
+  const c = sc(), o = c.createOscillator(), g = c.createGain();
+  const lim = c.createDynamicsCompressor();
+  lim.threshold.value = -6; lim.ratio.value = 20;
+  o.type = type;
+  o.frequency.setValueAtTime(f1, c.currentTime);
+  if (f2) o.frequency.exponentialRampToValueAtTime(f2, c.currentTime + dur);
+  g.gain.setValueAtTime(vol, c.currentTime);
+  g.gain.exponentialRampToValueAtTime(0.001, c.currentTime + dur);
+  o.connect(g); g.connect(lim); lim.connect(c.destination);
+  o.start(); o.stop(c.currentTime + dur);
+  sActive.push(o);
+  return o;
+}
+function siren(n, hi, lo, step){
+  const c = sc();
+  const o = c.createOscillator(), g = c.createGain();
+  o.type = 'sawtooth'; g.gain.value = 0.5;
+  const total = n * step;
+  for (let i = 0; i < n; i++){
+    o.frequency.setValueAtTime(i % 2 ? lo : hi, c.currentTime + i * step);
+  }
+  o.connect(g); g.connect(c.destination);
+  o.start(); o.stop(c.currentTime + total);
+  sActive.push(o);
+}
+const SOUNDS = {
+  siren: () => { const c = sc(), o = c.createOscillator(), g = c.createGain(), l = c.createOscillator(), lg = c.createGain();
+    o.type = 'sawtooth'; o.frequency.value = 800; l.frequency.value = 1; lg.gain.value = 400; g.gain.value = 0.5;
+    l.connect(lg); lg.connect(o.frequency); o.connect(g); g.connect(c.destination);
+    o.start(); l.start(); o.stop(c.currentTime + 6); l.stop(c.currentTime + 6); sActive.push(o, l); },
+  horn: () => { tone('sawtooth', 220, 0, 1.5, 0.6); tone('square', 277, 0, 1.5, 0.4); },
+  laser: () => tone('sawtooth', 1800, 100, 0.5, 0.6),
+  drop: () => { tone('sine', 150, 30, 1.5, 1); tone('triangle', 80, 25, 1.5, 0.8); },
+  alarm: () => siren(12, 1000, 600, 0.25),
+  bell: () => { tone('sine', 880, 0, 2, 0.6); tone('sine', 1760, 0, 1.5, 0.3); tone('sine', 2640, 0, 1, 0.2); },
+  police: () => siren(10, 900, 700, 0.5),
+  up: () => tone('square', 200, 2000, 1.2, 0.4),
+  stop: () => { sActive.forEach(o => { try{ o.stop(); }catch(e){} }); sActive = []; }
+};
+document.querySelectorAll('[data-s]').forEach(b => b.onclick = () => SOUNDS[b.dataset.s]());
+</script>
+</body>
+</html>
